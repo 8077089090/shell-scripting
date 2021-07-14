@@ -29,3 +29,5 @@ echo ${b[*]:0:4}
 ##Now above command shows different result than earlier what it showed because here we removed the 3rd index value hence it removes it and counts the followed value which is "30" and the result will be displayed as 10 aa 20 30
 
 # NOTE : Here we removed 3rd index and its value as we try to find that variable using command echo ${b[3]} then we cannot be able to see any result which means there is nothing left.But however we can again insert it if we need it by b[3]
+# Parent shell is the one where we working and trying to execute whereas childshell is where we need to export the command from parentshell
+echo $COURSE
