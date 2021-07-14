@@ -10,3 +10,8 @@ echo number of users=$NO_OF_USERS
 DATE=$(date +%F)
 echo welcome, today date is $DATE
 ## In the above syntax: $(date +%F) , it gives the current date of every day
+## example: a=600 ,echo $a, readonly a (it means "a" is given with 600 and it can be replaced or overwrite wih anyother new data)
+
+b=(10 aa 20 bb 30 cc)
+echo ${b[0]}
+# above command gives the first value of b which is 10
