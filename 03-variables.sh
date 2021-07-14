@@ -7,3 +7,4 @@ echo B=$A
 ## command substitutes
 NO_OF_USERS=$(who |wc -l)
 echo number of users=$NO_OF_USERS
+gfhgffgf
