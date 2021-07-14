@@ -32,3 +32,5 @@ echo ${b[*]:0:4}
 ## LOCAL Concept ##
 # Parent shell is the one where we working and trying to execute whereas childshell is where we need to export the command from parentshell
 echo $COURSE
+##NOTE: from the above statement, here we given echo $COURSE inside childshell and we were going to termial where we working  and then we assign COURSE=Devops and also <export Course=Devops> (Here export is the command which connects parent shell to childshell)
+# Now if we give bash 03-variables.sh then it gives all the content which was in 03-variables.sh
