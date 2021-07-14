@@ -7,3 +7,6 @@ echo B=$A
 ## command substitutes
 NO_OF_USERS=$(who |wc -l)
 echo number of users=$NO_OF_USERS
+DATE=$(date +%F)
+echo welcome, today date is $DATE
+## In the above syntax: $(date +%F) , it gives the current date of every day
