@@ -21,3 +21,5 @@ echo -e "HELLO CHANDU\n\twhatsup?"
 
  echo -e "\e[31mCHANDU"
  ## The above command give CHANDU in RED color
+ ## After once giving a colorcode  we have to disable it  if we need a plaincolor text or else text continues in the above given color
+ ## disabling color syntax : echo -e "\e[31mCHANDU\e[0m"
