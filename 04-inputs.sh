@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 
-## inputs can be loaded using special varialbles
+## inputs can be loaded using special variables
 ##0-n,@,#,*
-# in scriot if you want to accecc scriptname then $0
+# in script if you want to access script name then $0
 echo $0
 # if you want to access the first argument then $1
 echo $1
