@@ -16,5 +16,5 @@ a=$1
 echo Enter first value $a
 b=$2
 echo Enter second value $b
-c=$($a+$b)
+c=$(($a+$b))
 echo Totalvalue $c
