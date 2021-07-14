@@ -15,3 +15,5 @@ echo welcome, today date is $DATE
 b=(10 aa 20 bb 30 cc)
 echo ${b[0]}
 # above command gives the first value of b which is 10
+echo ${b[5]}
+# above command gives fifth  value of b which is cc ; Here 0 counts as first value followed by 1,2,3..
