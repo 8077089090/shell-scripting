@@ -2,7 +2,7 @@
 LOG=/tmp/roboshop.log
 rm -f $LOG
 echo -n -e "Installing Nginx\t\t..."
- yumm install nginx -y &>>$LOG
+ yum install nginx -y &>>$LOG
  if [ $? -eq 0 ] ; then
    echo -e "\e[32mDONE\e[0m"
  else
