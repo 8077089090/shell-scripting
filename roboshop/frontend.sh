@@ -10,14 +10,17 @@ STATUSCHECK() {
    exit 1
    fi
  }
-echo -n -e "Installing Nginx\t\t..."
+ STAMP() {
+   echo -n -e "$1\t\t..."
+ }
+STAMP "Installing Nginx"
  yum install nginx -y &>>$LOG
 STATUSCHECK $?
 
-echo -n -e "Enabling Nginx\t\t\t..."
+STAMP "Enabling Nginx"
  systemctl enable nginx &>>LOG
 STATUSCHECK $?
 
-echo -n -e "starting Nginx\t\t\t..."
+STAMP "starting Nginx"
  systemctl start nginx &>>LOG
 STATUSCHECK $?
