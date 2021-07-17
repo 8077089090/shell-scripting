@@ -16,8 +16,8 @@ STATUS_CHECK $?
 
 echo -n -e "Enabling Nginx\t\t\t..."
  systemctl enable nginx &>>LOG
-STATUS CHECK $?
+STATUS_CHECK $?
 
 echo -n -e "starting Nginx\t\t\t..."
  systemctl start nginx &>>LOG
-STATUS CHECK $?
+STATUS_CHECK $?
