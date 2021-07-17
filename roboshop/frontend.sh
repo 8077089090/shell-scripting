@@ -17,10 +17,10 @@ STAMP "Installing Nginx"
  yum install nginx -y &>>$LOG
 STATUSCHECK $?
 
-STAMP "Enabling Nginx"
+STAMP "Enabling Nginx\t"
  systemctl enable nginx &>>LOG
 STATUSCHECK $?
 
-STAMP "starting Nginx"
+STAMP "starting Nginx\t"
  systemctl start nginx &>>LOG
 STATUSCHECK $?
