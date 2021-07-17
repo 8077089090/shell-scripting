@@ -1,5 +1,6 @@
 #!/usr/bin/bash
 
+source common.sh
 STAMP "Installing Nginx"
  yum install nginx -y &>>$LOG
 STATUSCHECK $?
