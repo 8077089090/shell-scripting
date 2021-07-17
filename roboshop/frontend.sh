@@ -10,7 +10,15 @@ echo -e Installing Nginx
  fi
 echo -e Enabling Nginx
  systemctl enable nginx &>>LOG
- echo $?
+ if [ $? -eq 0 ] ; then
+   echo -e "\e[32mDONE\e[0m"
+ else
+ echo -e "\e[31mFAIL\e[0m"
+ fi
 echo -e starting Nginx
  systemctl start nginx &>>LOG
- echo $?
+ if [ $? -eq 0 ] ; then
+   echo -e "\e[32mDONE\e[0m"
+ else
+ echo -e "\e[31mFAIL\e[0m"
+ fi
