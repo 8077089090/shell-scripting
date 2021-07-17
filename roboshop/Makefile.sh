@@ -1,5 +1,5 @@
 help :    ## print this message
-    @fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/##//'
+  @fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/://' -e 's/##//'
 frontend :    Install frontend component
     @bash frontend.sh
 catalogue :   Install catalogue component
