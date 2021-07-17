@@ -11,7 +11,7 @@ echo -n -e "Installing Nginx\t\t..."
  fi
 
 echo -n -e "Enabling Nginx\t\t\t..."
- systemctl1 enable nginx &>>LOG
+ systemctl enable nginx &>>LOG
  if [ $? -eq 0 ] ; then
    echo -e "\e[32mDONE\e[0m"
  else
