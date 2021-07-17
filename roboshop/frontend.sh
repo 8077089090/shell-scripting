@@ -20,10 +20,10 @@ echo -n -e "Enabling Nginx\t\t\t..."
  fi
 
 echo -n -e "starting Nginx\t\t\t..."
-exit 3
  systemctl start nginx &>>LOG
  if [ $? -eq 0 ] ; then
    echo -e "\e[32mDONE\e[0m"
  else
  echo -e "\e[31mFAIL\e[0m"
+ exit 3
  fi
