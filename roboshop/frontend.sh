@@ -2,7 +2,7 @@
 LOG=/tmp/roboshop.log
 rm -f $LOG
 
-STATUS CHECK() {
+STATUS_CHECK() {
    if [ $1 -eq 0 ] ; then
    echo -e "\e[32mDONE\e[0m"
  else
@@ -12,7 +12,7 @@ STATUS CHECK() {
  }
 echo -n -e "Installing Nginx\t\t..."
  yum install nginx -y &>>$LOG
-STATUS CHECK $?
+STATUS_CHECK $?
 
 echo -n -e "Enabling Nginx\t\t\t..."
  systemctl enable nginx &>>LOG
