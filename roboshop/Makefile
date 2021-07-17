@@ -1,24 +1,21 @@
-help :    ## print this message
-  @fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/://' -e 's/##//'
-frontend :    Install frontend component
-    @bash frontend.sh
+frontend :	Install frontend component
+    @echo frontend.sh
 catalogue :   Install catalogue component
-    @bash catalogue.sh
+    @echo catalogue.sh
 cart :    Install cart component
-    @bash cart.sh
+    @echo cart.sh
 user :    Install user component
-    @bash user.sh
+    @echo user.sh
 shipping :    Install shipping component
-    @bash shipping.sh
+    @echo shipping.sh
 payment :   Install payment component
-    @bash payment.sh
+    @echo payment.sh
 mongodb :   Install mongodb component
-    @bash mongodb.sh
+    @echo mongodb.sh
 redis :   Install redis component
-    @bash redis.sh
+    @echo redis.sh
 mysql :   Install mysql component
-    @bash mysql.sh
+    @echo mysql.sh
 rabbitmq :    Install rabbitmq component
-    @bash rabbitmq.sh
-databases :		Install all databases
-databases :		mongodb redis mysql rabbitmq
+    @echo rabbitmq.sh
+
