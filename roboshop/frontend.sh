@@ -2,7 +2,7 @@
 
 source common.sh
 STAMP "Installing Nginx"
-yum install nginx -y
+yum install nginx -y &>>$LOG
 STATUSCHECK $?
 
 STAMP "Download frontend"
