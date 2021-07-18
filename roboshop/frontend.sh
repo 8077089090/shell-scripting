@@ -21,10 +21,10 @@ STAMP "Update roboshop config\t"
 mv localhost.conf /etc/nginx/default.d/roboshop.conf &>>$LOG
 STATUSCHECK $?
 
-STAMP "Enabling Nginx\t/t"
+STAMP "Enabling Nginx\t\t"
  systemctl enable nginx &>>LOG
 STATUSCHECK $?
 
-STAMP "starting Nginx\t/t"
+STAMP "starting Nginx\t\t"
  systemctl start nginx &>>LOG
 STATUSCHECK $?
