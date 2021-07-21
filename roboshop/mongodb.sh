@@ -8,8 +8,10 @@ gpgcheck=1
 enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-4.2.asc' >/etc/yum.repos.d/mongodb.repo
 STATUSCHECK $?
+STAMP "Instal mongodb\t\t"
+yum install -y mongodb-org
+STATUSCHECK $?
 
-# yum install -y mongodb-org
 # systemctl enable mongod
 # systemctl start mongod
 # systemctl restart mongod
