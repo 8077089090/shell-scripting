@@ -20,7 +20,7 @@ STAMP "Start Mongodb service\t"
 systemctl enable mongod &>>$LOG && systemctl start mongod &>>$LOG
 STATUSCHECK $?
 
-STAMP "Download mongodb schema"
+STAMP "Download mongodb schema\t"
 curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip" &>>$LOG
 STATUSCHECK $?
 
