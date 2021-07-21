@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 source common.sh
 
-STAMP "Install nodejs file"
+STAMP "Install nodejs file\t"
 yum install nodejs make gcc-c++ -y &>>$LOG
 STATUSCHECK $?
 
@@ -17,7 +17,7 @@ curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/cat
 STATUSCHECK $?
 
 STAMP "Extract downloaded code"
-cd /home/roboshop &&  unzip -o /tmp/catalogue.zip &>>$LOG && mv catalogue-main catalogue && cd /home/roboshop/catalogue && npm install
+cd /home/roboshop &&  unzip -o /tmp/catalogue.zip &>>$LOG && mv catalogue-main catalogue && cd /home/roboshop/catalogue && npm install --unsafe-perm &>>$LOG
 STATUSCHECK $?
 
 
