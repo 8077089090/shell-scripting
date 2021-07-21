@@ -11,6 +11,7 @@ STATUSCHECK $?
 STAMP "Instal mongodb\t\t"
 yum install -y mongodb-org &>>$LOG
 STATUSCHECK $?
+
 STAMP "update mongodb listen address"
 sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
 STATUSCHECK $?
@@ -18,8 +19,11 @@ STATUSCHECK $?
 STAMP "Start Mongodb service\t"
 systemctl enable mongod &>>$LOG && systemctl start mongod &>>$LOG
 STATUSCHECK $?
+
 STAMP "Download mongodb schema"
 curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip" &>>$LOG
 STATUSCHECK $?
+
 STAMP "load schema\t\t\t"
 cd /tmp && unzip -o mongodb.zip &>>$LOG && cd mongodb-main && mongo < catalogue.js &>>$LOG && mongo < users.js &>>$LOG
+STATUSCHECK $?
