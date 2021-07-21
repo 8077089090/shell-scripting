@@ -15,7 +15,7 @@ STAMP "update mongodb listen address"
 sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mongod.conf
 STATUSCHECK $?
 
-STAMP "Start Mongodb service/t"
+STAMP "Start Mongodb service\t"
 systemctl enable mongod &>>$LOG && systemctl start mongod &>>$LOG
 STAMP "Download mongodb schema"
 curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip" &>>$LOG
