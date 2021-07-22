@@ -28,7 +28,10 @@ STAMP "Fix application permissios"
 chown roboshop:roboshop /home/roboshop -R &>>$LOG
 STATUSCHECK $?
 
- #mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
-# systemctl daemon-reload
-# systemctl start catalogue
-# systemctl enable catalogue
+STAMP "update systemD file\t"
+sed -i -e "s/MONGO_DNSNAMEmongodb.roboshop.internal/" /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service  /etc/systemd/system/catalogue.service
+STATUSCHECK $?
+
+STAMP "start catalogue service\t"
+systemctl daemon-reload &>>$LOG && systemctl start catalogue &>>$LOG && systemctl enable catalogue &>>$LOG
+STATUSCHECK $?
