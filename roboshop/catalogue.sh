@@ -29,7 +29,7 @@ chown roboshop:roboshop /home/roboshop -R &>>$LOG
 STATUSCHECK $?
 
 STAMP "update systemD file\t"
-sed -i -e "s/MONGO_DNSNAMEmongodb.roboshop.internal/" /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service  /etc/systemd/system/catalogue.service
+sed -i -e 's/MONGO_DNSNAMEmongodb.roboshop.internal/' /home/roboshop/catalogue/systemd.service && mv /home/roboshop/catalogue/systemd.service  /etc/systemd/system/catalogue.service
 STATUSCHECK $?
 
 STAMP "start catalogue service\t"
