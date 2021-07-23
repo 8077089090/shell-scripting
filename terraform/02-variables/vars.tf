@@ -6,5 +6,5 @@ output "sample" {
 }
 
 output "sample1" {
-  value = "${var.sample}"
+  value = "var.sample"
 }
