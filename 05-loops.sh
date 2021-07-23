@@ -20,5 +20,5 @@ done
 
 # example
 for cricketers in dhoni kohli dravid ganguly sachin ; do
-  echo cricketers
+  echo $cricketers
 done
