@@ -18,11 +18,6 @@ output "test" {
   value = var.test
 }
 
-variable "sample2" {}
-
-output "sample2" {
-  value = var.sample2
-}
 
 variable "string" {
   default = "Hello"
@@ -37,5 +32,5 @@ variable "boolean" {
 }
 
 output "data-types" {
-  value = String = var.string , Number = var.number , Boolean = var.boolean
+  value = "String = var.string , Number = var.number , Boolean = var.boolean"
 }
