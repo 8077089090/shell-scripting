@@ -41,6 +41,10 @@ output "sg-attributes" {
 
 }
 
+output "ec2-attributes" {
+  value                = aws_instance.terraform_instance
+
+}
 provider "aws" {
   region               = "us-east-1"
 }
