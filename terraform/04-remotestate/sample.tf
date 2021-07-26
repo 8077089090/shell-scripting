@@ -6,13 +6,6 @@ resource "aws_instance" "terraform_instance" {
   }
 }
 
-resource "aws_instance" "terraform_instance1" {
-  ami                    = "ami-074df373d6bafa625"
-  instance_type          = "t3.small"
-  tags                   = {
-    Name                 = "terraform_instance1"
-  }
-}
 provider "aws" {
          region= "us-east-1"
 }
