@@ -1,14 +1,20 @@
-#!/usr/bin/bash
+#!/bin/bash
+
 source common.sh
 
-# yum install epel-release yum-utils -y
-# yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y
-# yum-config-manager --enable remi
-# yum install redis -y
+PRINT "Install Redis Repos\t"
+#yum install epel-release yum-utils http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y &>>$LOG
+yum install epel-release yum-utils https://ftp.igh.cnrs.fr/pub/remi/enterprise/remi-release-7.rpm  -y &>>$LOG
+STAT_CHECK $?
 
-Update the BindIP from 127.0.0.1 to 0.0.0.0 in config file /etc/redis.conf & /etc/redis/redis.conf
+PRINT "Install Redis\t\t"
+yum install redis -y --enablerepo=remi &>>$LOG
+STAT_CHECK $?
 
-Start Redis Database
+PRINT "Update Redis Listen Address"
+sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/redis.conf /etc/redis/redis.conf
+STAT_CHECK $?
 
-# systemctl enable redis
-# systemctl start redis
+PRINT "Start Redis Service\t"
+systemctl enable redis &>>$LOG && systemctl restart redis &>>$LOG
+STAT_CHECK $?
