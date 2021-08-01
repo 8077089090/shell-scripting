@@ -1,5 +1,7 @@
 #!/bin/bash
 
 source common.sh
-COMPONENT=cart
-NODEJS
+
+COMPONENT=payment
+PYTHON3
+

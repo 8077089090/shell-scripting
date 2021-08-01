@@ -1,5 +1,5 @@
 #!/bin/bash
 
 source common.sh
-COMPONENT=cart
+COMPONENT=catalogue
 NODEJS
