@@ -15,7 +15,7 @@ pipeline {
 
     stage('Terraform INIT') {
       steps {
-        sh 'cd  roboshop-shell-scripting ; terraform init'
+        sh 'cd  terraform/roboshop-shell-scripting ; terraform init'
       }
     }
 
@@ -25,7 +25,8 @@ pipeline {
       }
       steps {
         sh '''
-          cd roboshop-shell-scripting
+          cd terraform
+          roboshop-shell-scripting
           terraform apply -auto-approve
         '''
       }
@@ -37,7 +38,8 @@ pipeline {
       }
       steps {
         sh '''
-          cd roboshop-shell-scripting
+          cd terraform
+          roboshop-shell-scripting
           terraform destroy -auto-approve
         '''
       }
